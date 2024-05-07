@@ -1,0 +1,12 @@
+version: '3'
+services:
+  jenkins:
+    build: .
+    image: jenkins/mod
+    container_name: jenkins
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - ../:/var/jenkins_home
+      # - ./update/jenkins.war:/usr/share/jenkins/jenkins.war
